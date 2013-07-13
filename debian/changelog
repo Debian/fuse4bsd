@@ -1,5 +1,6 @@
 fuse4bsd (0.3.9~pre1.20080208-6) UNRELEASED; urgency=low
 
+  [ Robert Millan ]
   * Make easier to backport:
     - Remove versioned build-dependency on libc.
     - Remove versioned build-dependency on freebsd-buildutils.
@@ -7,6 +8,10 @@ fuse4bsd (0.3.9~pre1.20080208-6) UNRELEASED; urgency=low
   * Remove squeeze compatibility kludge.
   * prevent_kfreebsd10_build.diff: kFreeBSD 10.x already provides native
     FUSE support.
+
+  [ Christoph Egger ]
+  * Add kldutils to build-depends so dkms is installable (depends on
+    module-init-tools which is virtual on kfreebsd)
 
  -- Robert Millan <rmh@debian.org>  Sat, 13 Jul 2013 16:12:13 +0200
 

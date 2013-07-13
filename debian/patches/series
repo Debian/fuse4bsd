@@ -4,3 +4,4 @@
 003_kernel_api.diff
 004_freebsd_macro.diff
 005_squeeze_backport.diff
+prevent_kfreebsd10_build.diff

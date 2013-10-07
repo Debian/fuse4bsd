@@ -23,7 +23,7 @@ Description: Filesystem in USErspace (utilities)
  mount fuse filesystems.
 
 Package: fuse4bsd-dkms
-Architecture: all
+Architecture: kfreebsd-any
 Depends: ${shlibs:Depends}, ${misc:Depends},
 # first version that supports kFreeBSD
  dkms (>= 2.2.0.1-3),

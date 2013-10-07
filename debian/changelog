@@ -1,3 +1,9 @@
+fuse4bsd (0.3.9~pre1.20080208-8) UNRELEASED; urgency=low
+
+  * Switch fuse4bsd-dkms to kfreebsd-any.
+
+ -- Robert Millan <rmh@debian.org>  Mon, 07 Oct 2013 22:55:03 +0200
+
 fuse4bsd (0.3.9~pre1.20080208-7) unstable; urgency=low
 
   * Replaces fuse4bsd (<= 0.3.9~pre1.20080208-4). (Closes: #716962)

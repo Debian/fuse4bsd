@@ -8,6 +8,8 @@ Uploaders:
 Build-Depends: debhelper (>= 7), po-debconf,
  freebsd-buildutils,
  libbsd-dev,
+Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/fuse4bsd/
+Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/fuse4bsd/
 Standards-Version: 3.9.2
 
 Package: fuse4bsd

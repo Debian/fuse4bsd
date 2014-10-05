@@ -1,0 +1,23 @@
+--- a/mount_fusefs/mount_fusefs.c
++++ b/mount_fusefs/mount_fusefs.c
+@@ -104,7 +104,7 @@
+ 	int mntflags, iovlen, verbose = 0;
+ 	char *dev = NULL, *dir = NULL, mntpath[MAXPATHLEN];
+ 	char *devo = NULL, *diro = NULL;
+-	char ndev[128];
++	char ndev[128], fdstr[15];
+ 	int i, done = 0, reject_allow_other = 0, safe_level = 0;
+ 	int altflags = DEFAULT_MOUNT_FLAGS;
+ 	int __altflags = DEFAULT_MOUNT_FLAGS;
+@@ -405,9 +405,11 @@
+ 
+ 	/* Prepare the options vector for nmount(). build_iovec() is declared
+ 	 * in mntopts.h. */
++	sprintf(fdstr, "%d", fd);
+ 	build_iovec(&iov, &iovlen, "fstype", "fusefs", -1);
+ 	build_iovec(&iov, &iovlen, "fspath", mntpath, -1);
+ 	build_iovec(&iov, &iovlen, "from", dev, -1);
++	build_iovec(&iov, &iovlen, "fd", fdstr, -1);
+ 
+ 	if (verbose)
+ 		fprintf(stderr, "mounting fuse daemon on device %s\n", dev);

@@ -46,10 +46,6 @@ install-indep:
 	dh_prep -i
 	dh_installdirs -i
 	dh_install -i
-	mkdir -p debian/fuse4bsd-dkms/usr/src/fuse4bsd-$(VERSION)/tools
-	cp -a fuse_module Makefile.common include \
-		debian/fuse4bsd-dkms/usr/src/fuse4bsd-$(VERSION)/
-	install -m755 tools/genopnames.awk debian/fuse4bsd-dkms/usr/src/fuse4bsd-$(VERSION)/tools/
 
 install-arch:
 	dh_testdir
@@ -69,13 +65,11 @@ binary-arch: build install
 	dh_installchangelogs
 	dh_installdocs
 	dh_installdebconf
-	dh_installinit -pfuse4bsd-dkms --name=fuse -- start 20 S . stop 20 0 1 6 .
 	dh_installman
 	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
-	dh_dkms -V $(VERSION)
 	dh_makeshlibs
 	dh_installdeb
 	dh_shlibdeps

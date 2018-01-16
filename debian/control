@@ -8,9 +8,9 @@ Uploaders:
 Build-Depends: debhelper (>= 7), po-debconf,
  freebsd-buildutils,
  libbsd-dev,
-Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/fuse4bsd/
-Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/fuse4bsd/
 Standards-Version: 3.9.2
+Vcs-Browser: https://salsa.debian.org/kfreebsd-team/fuse4bsd
+Vcs-Git: https://salsa.debian.org/kfreebsd-team/fuse4bsd.git
 
 Package: fuse4bsd
 Section: utils
